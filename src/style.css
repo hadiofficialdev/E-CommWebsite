@@ -181,7 +181,7 @@ textarea:focus-visible {
   align-items: center;
 }
 .nav_item .nav_link {
-  color:var(--text-color);
+  color:var(--textColor);
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1.6rem;
@@ -269,4 +269,184 @@ font-weight: 700;
 .hero_para {
   color:white;
   margin:2rem 0 4.2rem 0;
+}
+/*Extra Section*/
+.div_extra {
+  padding:3.2rem 2.4rem;
+  position:relative;
+  background-color:var(--backgroundSecondary);
+  border-radius: 0.5rem;
+  transition:all 0.3s ease;
+}
+.div_extra:hover {
+  transform: translateY(-5px);
+}
+
+.div_extra::after {
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:15rem;
+  height:15rem;
+  border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
+  background-color: var(--borderColor);
+  z-index: 1;
+}
+.extra_img {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+z-index: 2;
+}
+.extra_text p {
+  text-transform: uppercase;
+  font-size:1.4rem;
+  color:#1f36b9;
+}
+.extra_text h3 {
+  font-size:2.4rem;
+  text-transform: capitalize;
+  margin:0.6rem 0 1.6rem 0;
+}
+.extra_text a {
+  text-transform: uppercase;
+  color:var(--buttonColor);
+  border-bottom: 0.1rem solid var(--secondaryColor);
+}
+.extra_img img {
+  width:90%;
+  filter:drop-shadow(5px 8px 24px rgba(25,76,127,0.2));
+  max-width: 100%;
+  height: auto;
+}
+.div_extra:last-child img {
+  transform: rotate(5deg);
+}
+.extra_laptop {
+  width:60rem;
+  height:auto;
+}
+.grid-three--cols {
+  gap:6.4rem;
+}
+.grid-three--cols div {
+  justify-self: left;
+}
+/*Policy Section*/
+.section_policy .container {
+  padding: 3.2rem 0;
+  background-color: #fefefe;
+  border-radius: 0.5rem;
+}
+.div_policy {
+  padding:3.2rem;
+  display:flex;
+  align-items:center;
+  gap:3.2rem;
+  border-right:0.1rem solid var(--backgroundColor);
+  transition:all 0.3s ease;
+}
+.div_policy:hover {
+  transform: translateY(-5px);
+}
+.div_policy:last-child {
+  border-right:none;
+}
+.icons {
+  font-size:3.2rem;
+  color:#576ef0;
+}
+.div_policy_text p {
+  text-transform: capitalize;
+}
+.div_policy_text p:last-child {
+  font-size:1.3rem;
+}
+/*why choose us section*/
+.section_why_choose .grid {
+  gap:9.6rem;
+  align-items: center;
+}
+.why_choose_div {
+  margin-bottom: 3.2rem;
+}
+.section_why_choose .text_align_right .why_choose_div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align:center;
+}
+.section_why_choose .text_align_left .why_choose_div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+.common_text_highlight {
+  color:var(--main-color);
+  width:6rem;
+  height:6rem;
+  background-color:var(--supporting-color);
+  border-radius: 50%;
+  font-size:2.4rem;
+  margin:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.common_text_highlight:hover {
+  transform: translateY(-5px);
+  background-color: #4d91ff;
+  color: var(--supporting-color);
+}
+.why_choose_div .section_common_title {
+  margin-top: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+.choose_div_center, .choose_div_center figure {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  transform-origin: center;
+}
+.choose_div_center figure::before {
+  content:"";
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:45rem;
+  height:45rem;
+  border-radius: 50%;
+  background-color:var(--main-color);
+  z-index: -1;
+  animation: circle 5s linear infinite;
+}
+@keyframes circle {
+    0%   { background-color: #b3d0ff; transform: translate(-50%, -50%) scale(1); }
+  50%  { background-color: #4d91ff; transform: translate(-50%, -50%) scale(1.05); }
+  100% { background-color: #3381ff; transform: translate(-50%, -50%) scale(1); }
+}
+.choose_div_center figure::after {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:50rem;
+  height:50rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.5rem solid var(--supporting-color);
+  z-index: -1;
+}
+.choose_div_center img {
+  width:90%;
+  height:auto;
 }
