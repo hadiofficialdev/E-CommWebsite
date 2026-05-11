@@ -45,8 +45,8 @@
               <a href="contact.html" class="nav_link">Contact</a>
             </li>
             <li class="nav_item">
-              <a href="addToCart.html" id="cartValue" class=" nav-link add-to-cart-button">
-                <i class="fa-solid fa-cart-shopping"> 0 </i>
+              <a href="addToCart.html" id="cartValue" class=" nav_link add-to-cart-button">
+                <i class="fa-solid fa-cart-shopping"><span class="cartvalue">0</span></i>
               </a>
             </li>
           </ul>
@@ -109,7 +109,7 @@
           <div class="extra_text">
             <p>New Year Sale</p>
             <h3>Get an Extra 50% Off On Laptops</h3>
-            <a href="#">Show now</a>
+            <a href="#">Shop now</a>
           </div>
           <div class="extra_img">
             <img src="./public/images/laptop.png" class="extra-laptop" alt="laptop">
@@ -120,7 +120,7 @@
           <div class="extra_text">
             <p>New Year Sale</p>
             <h3>40% off on HeadPhones</h3>
-            <a href="#">SHow now</a>
+            <a href="#">Shop now</a>
           </div>
           <div class="extra_img">
             <img src="./public/images/headphoneEcom.png" alt="headphone">
@@ -131,7 +131,7 @@
             <div class="extra_text">
               <p>New Year Sale</p>
               <h3>30% off on MobilePhones</h3>
-              <a href="#">Show now</a>
+              <a href="#">Shop now</a>
             </div>
             <div class="extra_img">
               <img src="./public/images/mobiles.png" alt="mobile">
@@ -185,6 +185,65 @@
       </div>
     </section>
     <!--Policy Section End-->
+    <!--Products section start-->
+    <section class="section_products">
+      <div class="container">
+        <h2 class="checkoutHeading">
+          Checkout Zentoro Products
+        </h2>
+      </div>
+
+      <section class="container">
+        <div class="productContainer"></div>
+      </section>
+    </section>
+    <!--Products section end-->
+    <!--Product Template Section start-->
+    <template class="productTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt="">
+          </div>
+          <h2 class="productName"></h2>
+          <div class="productRatings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="productDescription"></p>
+          <div class="productPriceContainer">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+
+          <div class="productStockContainer">
+            <p class="productProperty">Total Stocks Available:</p>
+            <p class="productStock"></p>
+          </div>
+
+          <div class="productQuantityContainer">
+            <p class="productProperty">Quantity</p>
+            <div class="stockContainer">
+              <button class="cartIncrement">+</button>
+              <p class="productQuantity">1</p>
+              <button class="cartDecrement">-</button>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button productBtn">
+            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+          </button>
+
+        </article>
+      </div>
+    </template>
+    <!--Product Template section end-->
+
     <!--Why Choose us section start-->
     <section class="section_why_choose">
       <div class="container">
