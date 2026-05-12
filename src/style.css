@@ -545,6 +545,9 @@ footer {
   color:#ffff;
   padding:1rem 2rem;
   margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  gap:0.6rem;
 }
 .add-to-cart-button, .contact-btn {
   font-weight:500;
