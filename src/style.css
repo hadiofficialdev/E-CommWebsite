@@ -11,6 +11,7 @@
   font-weight:400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+   
 
   
   --buttonColor: #2a2c30;
@@ -25,6 +26,7 @@
   --glow-color: hsl(186, 91%, 4%);
   --para-color:#ffffff;
   --heading-color:#003B99;
+  --link-color:#ffffff;
 }
 
 html {
@@ -33,9 +35,9 @@ html {
 }
 body {
   margin:0 auto;
-  padding:0 32px;
   min-width: 320px;
   background-color: var(--backgroundColor);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -101,13 +103,14 @@ a:hover {
 }
 .grid-four--cols {
   grid-template-columns: repeat(4,1fr);
+  
 }
 /*reusable modules*/
 .btn {
   display:inline-block;
   padding:1.2rem 3.2rem;
   background-color: var(--buttonColor);
-  color: var(--para-color);
+  color: var(--link-color);
   text-transform: capitalize;
   border-radius:0.6rem;
   transition:all 0.3s ease;
@@ -119,7 +122,7 @@ a:hover {
 .btn:hover {
   cursor:pointer;
   transform: translateY(-4px);
-  color: var(--para-color);
+  color: var(--link-color);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .btn:focus-visible,
@@ -133,6 +136,7 @@ textarea:focus-visible {
   background-color: var(--buttonColor);
   color: var(--backgroundColor);
   padding: 1.5rem 2rem ;
+
 }
 .top_txt .head_txt p {
   font-size:1.3rem;
@@ -149,14 +153,15 @@ textarea:focus-visible {
   gap:2.5rem;
 }
 .signlink {
-  color: var(--para-color);
+  color: var(--link-color);
+  padding-top: 0.5rem;
   transition: all 0.3s ease;
 }
 .signlink:hover {
   cursor:pointer;
   transform: translateY(-4px);
-  color: var(--para-color);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  color: var(--link-color);
+  
 }
 
 .section_navbar {
@@ -170,10 +175,13 @@ textarea:focus-visible {
   justify-content:space-between;
   align-items: center;
   padding:1.6rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
 }
 .logo {
-  mix-blend-mode: multiply;
+  
   width: 140px;
+  
 }
 .section_navbar .navbar ul {
   display:flex;
@@ -338,8 +346,9 @@ z-index: 2;
 /*Policy Section*/
 .section_policy .container {
   padding: 3.2rem 0;
-  background-color: #fefefe;
+  background-color: var(--backgroundSecondary);
   border-radius: 0.5rem;
+  color: var(--textColor);
 }
 .div_policy {
   padding:3.2rem;
@@ -416,6 +425,9 @@ z-index: 2;
   position:relative;
   transform-origin: center;
 }
+.section_common_subheading {
+  color: var(--textColor);
+}
 .choose_div_center figure::before {
   content:"";
   position: absolute;
@@ -456,9 +468,8 @@ footer {
   width:100%;
   background-color: var(--buttonColor);
   color:var(--backgroundColor);
-  border-top-left-radius:0.5rem;
-  border-top-right-radius:0.5rem;
   margin-top:6.4rem;
+  
 }
 .footerlogo {
   
@@ -468,11 +479,11 @@ footer {
 .footer_container {
   display:flex;
   justify-content: space-between;
-  padding: 4rem 2rem;
+  padding: 2rem 1.5rem;
   gap:3rem;
 }
 .footer_container h4 {
-  color:#f7f7f7;
+  color:var(--link-color);
   font-weight: 500;
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
@@ -481,18 +492,18 @@ footer {
 .footer_container a {
   display: block;
   text-decoration: none;
-  color:#cccccc;
+  color:var(--link-color);
   margin-bottom: 1.5rem;
   font-size:1.3rem;
   transition:all 0.3s ease;
 }
 .footer_container a:hover {
   transform: translateY(-5px);
-  color:#f7f7f7;
+  color:var(--link-color);
   cursor: pointer;
 }
 .footer_container .content_1 p, .footer_container .content_4 p {
-  color:#f7f7f7;
+  color:var(--link-color);
   font-size: 1.5rem;
   margin: 2.5rem 0;
 }
@@ -500,8 +511,8 @@ footer {
   padding-left:1rem;
 }
 .footer_container .content_4 input {
-  background-color: var(--textColor);
-  color:var(--backgroundColor);
+  background-color: var(--backgroundSecondary);
+  color:var(--textColor);
   border:none;
   outline:none;
   padding:1.4rem 0.8rem;
@@ -516,7 +527,7 @@ footer {
   position: relative;
 }
  .bx  {
-  color: #f7f7f7;
+  color: var(--textColor);
   position:absolute;
   font-size: 2.4rem;
   right:1rem;
@@ -542,7 +553,7 @@ footer {
 /*cart button*/
 #cartValue {
   background-color: var(--buttonColor);
-  color:#ffff;
+  color:var(--link-color);
   padding:1rem 2rem;
   margin-right: 1rem;
   display: flex;
@@ -560,12 +571,17 @@ footer {
   font-size: 1.6rem;
   width: 100%;
 }
+
 .add-to-cart-button:hover, .contact-btn:hover {
   background-color: var(--backgroundColor);
   color:var(--buttonColor);
   cursor:pointer;
   box-shadow: inset 0 1px 4px rgba(0,0,0,0.16), inset 0 0 0 3px rgb(51,51,51);
 }
+.navCart, .navCart:hover {
+  box-shadow: none;
+}
+
 .fa-cart-shopping {
   
  padding-right: 1rem;
@@ -617,9 +633,13 @@ footer {
 }
 .productActualPrice {
   text-decoration: line-through;
+
 }
 .productPriceContainer {
   margin:0.8rem 0;
+}
+.productDescription, .productActualPrice, .productPrice, .productProperty, .productStock, .productQuantity {
+  color:var(--textColor);
 }
 .productProperty, .productDescription {
   font-size: 1.6rem;
@@ -668,7 +688,71 @@ footer {
 .productBtn {
   width:180px;
   transition: all 0.3s ease;
+  background-color: var(--buttonColor);
+  color:var(--link-color);
 }
 .productBtn:hover {
    transform: translateY(5px);
+}
+/*Dark theme*/
+.theme_switch {
+ position:relative;
+ display: inline-block;
+ width:6rem;
+ height:3.2rem;
+}
+.theme_switch input {
+  opacity: 0;
+  width: 0;
+  height:0;
+}
+.slider {
+  position: absolute;
+  inset:0;
+  cursor: pointer;
+  background-color: var(--backgroundColor);
+  border-radius: 5rem;
+  transition: 0.4s;
+}
+.slider::before {
+  content:"☀️";
+  position:absolute;
+  width: 2.4rem;
+  height:2.4rem;
+  left:0.4rem;
+  bottom:0.4rem;
+  background-color:var(--backgroundColor);
+  border-radius: 50%;
+  transition:0.4s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+input:checked + .slider {
+  background-color: #2a2c30;
+}
+input:checked + .slider::before {
+  transform: translateX(2.8rem);
+  background-color: #2a2c30;
+  content:"🌙";
+}
+.dark_theme {
+     --backgroundColor: black;
+  --backgroundSecondary: #1e1e1e;
+
+  --textColor: #f5f5f5;
+  --para-color: #ffffff;
+
+  --buttonColor: #f7f7f7;
+  --secondaryColor: #9aa0a6;
+
+  --borderColor: #333;
+  --main-color: #8ab4ff;
+  --supporting-color: #1f2937;
+
+  
+  --link-color:black;
+  
 }
