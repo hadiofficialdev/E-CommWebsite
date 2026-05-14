@@ -1,9 +1,10 @@
 import { getCartProductFromLocalStorage } from "./getCartProductFromLocalStorage";
+import { showToast } from "./showToast";
 import { updateCartValue } from "./updateCartValue";
 
 getCartProductFromLocalStorage();
 
-export const addToCart=function(event,id,stock) {
+export const addToCart=function(event,id,stock,name) {
     let arrLocalStorageProduct= getCartProductFromLocalStorage();
      
     const currCard=document.querySelector(`#card${id}`);
@@ -28,6 +29,7 @@ export const addToCart=function(event,id,stock) {
         
         });
         localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
+        showToast("add",id,name);
     }
 
     if(existingProd) {
@@ -41,4 +43,6 @@ export const addToCart=function(event,id,stock) {
 
     //cartbutton update
     updateCartValue(arrLocalStorageProduct);
+
+    showToast("add",id,name);
 }

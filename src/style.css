@@ -19,7 +19,7 @@
   --borderColor: #e3eaf0;
   --backgroundColor: #f7f7f7;
   --backgroundSecondary: #fefefe;
-  --textColor: #1e1f23;
+  --textColor: #010101;
   --anchorColor: #535bf2;
   --main-color: #535bf2;
   --supporting-color: #ebf3fe;
@@ -27,6 +27,8 @@
   --para-color:#ffffff;
   --heading-color:#003B99;
   --link-color:#ffffff;
+  --cardShadow: rgba(0,0,0,0.16);
+--cardGlow: rgba(0,0,0,0.08);
 }
 
 html {
@@ -74,6 +76,7 @@ a:hover {
   line-height:1.5;
   font-weight:400;
 }
+
 /*layout*/
 .container {
   max-width: 130rem;
@@ -148,6 +151,7 @@ textarea:focus-visible {
   align-items: center;
  
 }
+
 .signUp {
   display: flex;
   gap:2.5rem;
@@ -161,7 +165,6 @@ textarea:focus-visible {
   cursor:pointer;
   transform: translateY(-4px);
   color: var(--link-color);
-  
 }
 
 .section_navbar {
@@ -174,15 +177,15 @@ textarea:focus-visible {
   display:flex;
   justify-content:space-between;
   align-items: center;
-  padding:1.6rem;
-  padding-right: 0rem;
-  padding-left: 0rem;
+  padding:1.2rem 1rem 1.2rem 0rem;
+  
+  
 }
 .logo {
   
   width: 140px;
-  
 }
+
 .section_navbar .navbar ul {
   display:flex;
   gap:3.2rem;
@@ -245,11 +248,13 @@ main {
   fill:#ffffff;
 }
 .section_hero {
-  height: 90vh;
+  height: 80vh;
   display:flex;
   justify-content: center;
   align-items: center;
+
 }
+
 .heroImage {
   width: 100%;
   height:auto;
@@ -475,6 +480,7 @@ footer {
   
   width:140px;
   
+  
 }
 .footer_container {
   display:flex;
@@ -558,7 +564,7 @@ footer {
   margin-right: 1rem;
   display: flex;
   align-items: center;
-  gap:0.6rem;
+  gap:0.9rem;
 }
 .add-to-cart-button, .contact-btn {
   font-weight:500;
@@ -578,6 +584,7 @@ footer {
   cursor:pointer;
   box-shadow: inset 0 1px 4px rgba(0,0,0,0.16), inset 0 0 0 3px rgb(51,51,51);
 }
+
 .navCart, .navCart:hover {
   box-shadow: none;
 }
@@ -694,6 +701,109 @@ footer {
 .productBtn:hover {
    transform: translateY(5px);
 }
+/*Add to cart Page*/
+#productCartContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#productCartContainer .cards {
+  width:100%;
+  max-width: 100%;
+  margin:0;
+  box-shadow: 0 0;
+  border-top:0.1rem solid #d8d8d8;
+  border-left:0.1rem solid #d8d8d8;
+  border-right:0.1rem solid #d8d8d8;
+  border-radius: 0;
+}
+#productCartContainer .cards:last-child {
+  border-bottom: 0.1rem solid #d8d8d8;
+}
+#productCartContainer .information {
+  width:100%;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr 0.5fr 1fr 1fr;
+  align-items: center;
+  gap:3.2rem;
+}
+#productCartContainer .productImage {
+  width:16rem;
+}
+#productCartContainer .productName {
+  font-size: 2rem;
+}
+#productCartContainer .productPrice {
+  font-size: 1.6rem;
+}
+
+
+
+.productCartTotalElem {
+  display:flex;
+  justify-content: flex-end;
+  width:100%;
+  margin-top: 3.2rem;
+}
+.productCartTotalElement {
+  padding:2.4rem;
+  height:auto;
+  width:32rem;
+  color:var(--buttonColor);
+  background-color: var(--backgroundSecondary);
+  box-shadow: var(--cardShadow)0px 1px 4px,
+                var(--cardGlow) 0px 0px 0px 3px;
+}
+.productOrderTotal {
+
+  max-width: 30rem;
+}
+.productOrderTotal div {
+  display: flex;
+  justify-content: space-between;
+  margin-top:3.2rem;
+  color:#8c9299;
+}
+.productTotalHeading {
+  color:var(--buttonColor);
+}
+.productSubTotal , .productFinalTotal , .productTax  {
+  font-weight: bold;
+  color:var(--textColor);
+}
+
+/*Toast notification*/
+.toast {
+  position: fixed;
+  top:2rem;
+  right:1.4rem;
+  background-color: var(--buttonColor);
+  color:var(--link-color);
+  padding:10px 20px;
+  border-radius: 5px;
+  border-bottom:0;
+  border-color: red;
+  font-size: 1.6rem;
+  font-family: "urbanist";
+  z-index: 1000;
+  animation: toastAnimation 0.5s linear;
+  box-shadow: inset 0px 0px 0.5rem 0px var(--glow-color),
+              0px 0px 0.5rem 0px var(--glow-color);
+}
+@keyframes toastAnimation {
+  0% {
+    transform:translateX(100%);
+    opacity:0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity:1;
+  }
+  100% {
+    transform:translateX(0);
+    opacity:1;
+  }
+}
 /*Dark theme*/
 .theme_switch {
  position:relative;
@@ -754,5 +864,7 @@ input:checked + .slider::before {
 
   
   --link-color:black;
+ --cardShadow: rgba(255,255,255,0.08);
+  --cardGlow: rgba(255,255,255,0.12);
   
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zentoro</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" sizes="32x32" href="./public/images/logo-removebg-preview.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navbar start-->
+    <header class="section_navbar">
+      <section class="top_txt">
+        <div class="head_container">
+        <div class="head_txt">
+          <p>Free Shipping Worldwide.</p>
+        </div>
+        <div class="signUp">
+          <label class="theme_switch">
+            <input type="checkbox" id="theme_toggle">
+            <span class="slider"></span>
+          </label>
+          
+          <a href="#" class="signlink">SIGN IN</a>
+          <a href="#" class="signlink">SIGN UP</a>
+        </div>
+        </div>
+      </section>
+      <div class="container logo_container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            
+            <img src="./public/images/logo-removebg-preview.png" alt="Zentoro" class="logo" width="15%" height="auto">
+        
+          </a>
+            
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li class="nav_item">
+              <a href="/" class="nav_link">Home</a>
+            </li>
+            <li class="nav_item">
+              <a href="#about" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+              <a href="product.html" class="nav_link">Products</a>
+            </li>
+            <li class="nav_item">
+              <a href="contact.html" class="nav_link">Contact</a>
+            </li>
+            <li class="nav_item">
+              <a href="addToCart.html" id="cartValue" class=" nav_link add-to-cart-button navCart">
+                <i class="fa-solid fa-cart-shopping navCart"></i><span class="cartvalue">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--navbar end-->
+    <section class="addToCartElement">
+        <div class="container">
+            <section>
+                <div id="productCartContainer"></div>
+            </section>
+            <section class="productCartTotalElem">
+                <div class="productCartTotalElement">
+                    <p class="productTotalHeading">Selected Offer Summary</p>
+                    <div class="productOrderTotal">
+                        <div>
+                            <p>Sub Total:</p>
+                            <p class="productSubTotal">0</p>
+                        </div>
+                        <div>
+                            <p>Tax:</p>
+                            <p class="productTax">Rs.100</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p>Final Total:</p>
+                            <p class="productFinalTotal">0</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!--Product Template-->
+    <template id="productCardTemplate">
+        <div class="cards" id="cardValue">
+            <article class="information [card]">
+                <div>
+                    <span class="category"></span>
+                </div>
+                <div class="imageContainer">
+                    <img class="productImage" src="" alt="">
+                </div>
+
+                <h2 class="productName"></h2>
+                <p class="productPrice"></p>
+
+                <div class="stockContainer">
+                    <button class="cartIncrement">+</button>
+                    <p class="productQuantity">1</p>
+                    <button class="cartDecrement">-</button>
+                </div>
+
+                <button class="add-to-cart-button remove-to-cart-button productBtn">Remove</button>
+            </article>
+        </div>
+    </template>
+    <!--footer start-->
+     <footer class="section_footer">
+      <div class="footer_container container">
+        <div class="content_1">
+          <img src="./public/images/logoFooterfinal-removebg-preview.png" class="footerlogo" alt="logo">
+          <p> Welcome to Zentoro, your ultimate destination for
+            cutting-edge gadgets!</p>
+            <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+        </div>
+        <div class="content_2">
+          <h4>Products</h4>
+          <a href="#">Computers</a>
+          <a href="#">Laptops</a>
+          <a href="#">Accessories</a>
+          <a href="#">Sales & Discounts</a>
+        </div>
+        <div class="content_3">
+          <h4>Support</h4>
+          <a href="./contact.html">Contact Us</a>
+          <a href="" target="_blank">Payment Method</a>
+          <a href="" targte="_blank">Delivery</a>
+          <a href="" target="_blank">Return and Exchange</a>
+        </div>
+        <div class="content_4">
+          <h4>Newsletter</h4>
+          <p>Be the first to know about new arrivals, sales & promos!</p>
+          <div class="f_email">
+            <input type="email" placeholder="Enter Email....">
+            <i class="bx bx-envelope"></i>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="f_design">
+        <div class="f_design_border">
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+    <script type="module" src="/src/showAddToCart.js"></script>
+</body>
+</html>
