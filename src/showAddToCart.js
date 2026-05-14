@@ -6,7 +6,7 @@ import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
 import { removeProdFromCart } from "./removeProdFromCart.js";
 import { incrementDecrement } from "./incrementDecrement.js";
 import { updateCartTotalProduct } from "./updateCartTotalProduct.js";
-
+import "./hamburger.js"
 let cartProducts= getCartProductFromLocalStorage();
 
 let filterProducts=products.filter((currProd)=>{

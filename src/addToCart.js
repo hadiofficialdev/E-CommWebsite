@@ -2,6 +2,7 @@ import { getCartProductFromLocalStorage } from "./getCartProductFromLocalStorage
 import { showToast } from "./showToast";
 import { updateCartValue } from "./updateCartValue";
 
+
 getCartProductFromLocalStorage();
 
 export const addToCart=function(event,id,stock,name) {

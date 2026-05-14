@@ -3,7 +3,7 @@ import './style.css';
 const footerHTML=`<footer class="section_footer">
       <div class="footer_container container">
         <div class="content_1">
-          <img src="./public/images/logoFooterfinal-removebg-preview.png" class="footerlogo" alt="logo">
+          <img src="/images/logoFooterfinal-removebg-preview.png" class="footerlogo" alt="logo">
           <p> Welcome to Zentoro, your ultimate destination for
             cutting-edge gadgets!</p>
             <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />

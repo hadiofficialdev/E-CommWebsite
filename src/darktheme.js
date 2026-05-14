@@ -10,8 +10,8 @@ if (theme === "dark") {
   document.body.classList.add("dark_theme");
   themeToggle.checked = true;
 
-  logoLight.src = "./public/images/logoFooterfinal-removebg-preview.png";
-  logoDark.src = "./public/images/logo-removebg-preview.png";
+  logoLight.src = "/images/logoFooterfinal-removebg-preview.png";
+  logoDark.src = "/images/logo-removebg-preview.png";
 }
 
 // toggle theme
@@ -23,10 +23,10 @@ themeToggle.addEventListener("change", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
 
   if (isDark) {
-    logoLight.src = "./public/images/logoFooterfinal-removebg-preview.png";
-    logoDark.src = "./public/images/logo-removebg-preview.png";
+    logoLight.src = "/images/logoFooterfinal-removebg-preview.png";
+    logoDark.src = "/images/logo-removebg-preview.png";
   } else {
-    logoLight.src = "./public/images/logo-removebg-preview.png";
-    logoDark.src = "./public/images/logoFooterfinal-removebg-preview.png";
+    logoLight.src = "/images/logo-removebg-preview.png";
+    logoDark.src = "/images/logoFooterfinal-removebg-preview.png";
   }
 });

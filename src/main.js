@@ -1,5 +1,6 @@
 import './style.css';
 import "./darktheme";
+import "./hamburger.js";
 
 import products from "./api/products.json";
 import { showProductContainer } from './homeProductCards';
