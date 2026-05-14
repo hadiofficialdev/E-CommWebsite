@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" sizes="32x32" href="./public/images/logo-removebg-preview.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zentoro</title>
+  </head>
+  <body>
+    <header class="section_navbar">
+      <section class="top_txt">
+        <div class="head_container">
+        <div class="head_txt">
+          <p>Free Shipping Worldwide.</p>
+        </div>
+        <div class="signUp">
+          <label class="theme_switch">
+            <input type="checkbox" id="theme_toggle">
+            <span class="slider"></span>
+          </label>
+          
+          <a href="#" class="signlink">SIGN IN</a>
+          <a href="#" class="signlink">SIGN UP</a>
+        </div>
+        </div>
+      </section>
+      <div class="container logo_container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            
+            <img src="./public/images/logo-removebg-preview.png" alt="Zentoro" class="logo" width="15%" height="auto">
+        
+          </a>
+            
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li class="nav_item">
+              <a href="/" class="nav_link">Home</a>
+            </li>
+            <li class="nav_item">
+              <a href="about.html" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+              <a href="product.html" class="nav_link">Products</a>
+            </li>
+            <li class="nav_item">
+              <a href="contact.html" class="nav_link">Contact</a>
+            </li>
+            <li class="nav_item">
+              <a href="addToCart.html" id="cartValue" class=" nav_link add-to-cart-button navCart">
+                <i class="fa-solid fa-cart-shopping navCart"></i><span class="cartvalue">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+    
+    <!--Extra Section Start-->
+    <section class="section_extra_product">
+      <div class="container grid grid-three--cols">
+        <div class="div_extra grid grid-two--cols">
+          <div class="extra_text">
+            <p>New Year Sale</p>
+            <h3>Get an Extra 50% Off On Laptops</h3>
+            <a href="#">Shop now</a>
+          </div>
+          <div class="extra_img">
+            <img src="./public/images/laptop.png" class="extra-laptop" alt="laptop">
+          </div>
+        </div>
+
+        <div class="div_extra grid grid-two--cols">
+          <div class="extra_text">
+            <p>New Year Sale</p>
+            <h3>40% off on HeadPhones</h3>
+            <a href="#">Shop now</a>
+          </div>
+          <div class="extra_img">
+            <img src="./public/images/headphoneEcom.png" alt="headphone">
+          </div>
+        </div>
+
+          <div class="div_extra grid grid-two--cols">
+            <div class="extra_text">
+              <p>New Year Sale</p>
+              <h3>30% off on MobilePhones</h3>
+              <a href="#">Shop now</a>
+            </div>
+            <div class="extra_img">
+              <img src="./public/images/mobiles.png" alt="mobile">
+            </div>
+          </div>
+      </div>
+    </section>
+    <!--Extra Section End-->
+    <!--Policy Section Start-->
+    <section class="section_policy">
+      <div class="container grid grid-four--cols">
+        <div class="div_policy">
+          <div class="icons">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="div_policy_text">
+            <p>Worldwide Shipping</p>
+            <p>Order Above $100</p>
+          </div>
+        </div>
+
+        <div class="div_policy">
+          <div class="icons">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <div class="div_policy_text">
+            <p>Easy Return Policy</p>
+            <p>Within 30 Days Return</p>
+          </div>
+        </div>
+
+        <div class="div_policy">
+          <div class="icons">
+             <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="div_policy_text">
+            <p>Money Back Guarantee</p>
+            <p>Within 30 Days</p>
+          </div>
+        </div>
+
+        <div class="div_policy">
+          <div class="icons">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="div_policy_text">
+            <p>24/7 Online Support</p>
+            <p>Customer Always First</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Policy Section End-->
+    <!--Products section start-->
+    <section class="section_products">
+      <div class="container product_heading_container">
+        <h2 class="checkoutHeading ">
+          Checkout Zentoro Products
+        </h2>
+      </div>
+
+      <section class="container">
+        <div class="productContainer"></div>
+      </section>
+    </section>
+    <!--Products section end-->
+    <!--Product Template Section start-->
+    <template class="productTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt="">
+          </div>
+          <h2 class="productName"></h2>
+          <div class="productRatings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="productDescription"></p>
+          <div class="productPriceContainer">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+
+          <div class="productStockContainer">
+            <p class="productProperty">Total Stocks Available:</p>
+            <p class="productStock"></p>
+          </div>
+
+          <div class="productQuantityContainer">
+            <p class="productProperty">Quantity</p>
+            <div class="stockContainer">
+              <button class="cartIncrement">+</button>
+              <p class="productQuantity">1</p>
+              <button class="cartDecrement">-</button>
+            </div>
+          </div>
+
+          <button class="add-to-cart-button productBtn">
+            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+          </button>
+
+        </article>
+      </div>
+    </template>
+    <!--Product Template section end-->
+    <!--footer start-->
+    <footer class="section_footer">
+      <div class="footer_container container">
+        <div class="content_1">
+          <img src="./public/images/logoFooterfinal-removebg-preview.png" class="footerlogo" alt="logo">
+          <p> Welcome to Zentoro, your ultimate destination for
+            cutting-edge gadgets!</p>
+            <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+        </div>
+        <div class="content_2">
+          <h4>Products</h4>
+          <a href="#">Computers</a>
+          <a href="#">Laptops</a>
+          <a href="#">Accessories</a>
+          <a href="#">Sales & Discounts</a>
+        </div>
+        <div class="content_3">
+          <h4>Support</h4>
+          <a href="./contact.html">Contact Us</a>
+          <a href="" target="_blank">Payment Method</a>
+          <a href="" targte="_blank">Delivery</a>
+          <a href="" target="_blank">Return and Exchange</a>
+        </div>
+        <div class="content_4">
+          <h4>Newsletter</h4>
+          <p>Be the first to know about new arrivals, sales & promos!</p>
+          <div class="f_email">
+            <input type="email" placeholder="Enter Email....">
+            <i class="bx bx-envelope"></i>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="f_design">
+        <div class="f_design_border">
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+   AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+

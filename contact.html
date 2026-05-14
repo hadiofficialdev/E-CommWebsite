@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" sizes="32x32" href="./public/images/logo-removebg-preview.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zentoro</title>
+  </head>
+  <body>
+    <header class="section_navbar">
+      <section class="top_txt">
+        <div class="head_container">
+        <div class="head_txt">
+          <p>Free Shipping Worldwide.</p>
+        </div>
+        <div class="signUp">
+          <label class="theme_switch">
+            <input type="checkbox" id="theme_toggle">
+            <span class="slider"></span>
+          </label>
+          
+          <a href="#" class="signlink">SIGN IN</a>
+          <a href="#" class="signlink">SIGN UP</a>
+        </div>
+        </div>
+      </section>
+      <div class="container logo_container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            
+            <img src="./public/images/logo-removebg-preview.png" alt="Zentoro" class="logo" width="15%" height="auto">
+        
+          </a>
+            
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li class="nav_item">
+              <a href="/" class="nav_link">Home</a>
+            </li>
+            <li class="nav_item">
+              <a href="#about" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+              <a href="product.html" class="nav_link">Products</a>
+            </li>
+            <li class="nav_item">
+              <a href="contact.html" class="nav_link">Contact</a>
+            </li>
+            <li class="nav_item">
+              <a href="addToCart.html" id="cartValue" class=" nav_link add-to-cart-button navCart">
+                <i class="fa-solid fa-cart-shopping navCart"></i><span class="cartvalue">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <!--Contact Section-->
+    <section class="section_contact">
+        <div class="container">
+        <h2 class="section-common--heading">Get In Touch</h2>
+        <p class="section_common_subheading">
+          Have questions about our products or need support? 
+          Our team is here to help you with anything you need.
+        </p>
+        </div>
+
+        <div class="container grid grid-two--cols">
+            <div class="contact_content">
+                <form action="https://formspree.io/f/xvzlnjkw" method="POST">
+                    <div class="grid grid-two--cols mb-3"></div>
+                    <div>
+                        <label for="username">Full Name:</label>
+                        <input type="text" name="username" id="username" required autocomplete="off" placeholder="Enter Full Name....">
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" name="email" id="email" required autocomplete="off" placeholder="Enter Email Address....">
+                    </div>
+                     <div class="mb-3">
+              <label for="subject">Subject:</label>
+              <input type="text" name="subject" id="subject" required autocomplete="off" placeholder="Title of Message....">
+                     </div>
+                     <div class="mb-3">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Issue Details...."></textarea>
+                     </div>
+
+                     <div class="mb-3">
+                        <button type="submit" class="btn contact-btn">Send Message</button>
+                     </div>
+
+                    </form>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75112.8553999319!2d72.93424363522024!3d33.69469925690599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2sin!4v1778762290615!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!--footer start-->
+   <footer class="section_footer">
+    <script type="module" src="/src/footer.js"></script>
+   </footer>
+    <!--footer end-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+   AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
